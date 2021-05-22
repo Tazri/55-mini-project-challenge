@@ -9,7 +9,5 @@ panels.forEach(panel =>{
 
 function removeActive(event){
     let activePanel = document.querySelector(".active");
-    console.log(activePanel);
     activePanel.classList.remove("active");
-    console.log(activePanel);
 }
