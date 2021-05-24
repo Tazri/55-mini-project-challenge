@@ -1,0 +1,152 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #222;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container{
+    background-color: rgb(80, 107, 228);
+    transform-origin: top left;
+    transition: 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 100px;
+}
+
+.container.show-nav{
+    transform: rotate(-20deg);
+}
+
+.content{
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.img-div{
+    width: 100%;
+    text-align: center;
+}
+
+img{
+    min-width: 250px;
+    width: 70%;
+    max-width: 600px;
+    margin: 20px 0px 2px 0px;
+    border-radius: 10px;
+}
+
+.img-title{
+    color: rgb(43, 5, 92);
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: -13px 0px 14px 0px;
+}
+
+h2{
+    color: rgb(20, 0, 133);
+}
+
+h2+small{
+    color: rgb(43, 5, 92);
+}
+
+p{
+    margin-top: 20px;
+    color: rgb(40, 0, 87);
+    line-height: 20px;
+}
+
+.circle-container{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(20, 0, 133);
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle{
+    transform: rotate(-70deg);
+}
+
+.circle button{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100px;
+    background: transparent;
+    border: none;
+    font-size: 26px;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.circle button::-moz-focus-inner,.circle button::-moz-focus-outer,.circle button:focus{
+    outline: none;
+}
+
+.circle button#open{
+    left: 60%;
+}
+
+.circle button#close{
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.container.show-nav + nav li{
+    transform: translateX(0);
+    transition-delay: 0.3s ;
+}
+
+nav{
+    position: fixed;
+    bottom: 40px;
+    left: 0px;
+}
+
+nav ul{
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+nav ul li{
+    color: aliceblue;
+    text-transform: uppercase;
+    margin: 40px 0px;
+    transform: translateX(-100%);
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+nav ul li+li{
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+
+nav ul li+li+li{
+    margin: 30px;
+    transform: translateX(-200%);
+}
+
+nav ul li i{
+    font-size: 20px;
+    margin-right: 10px ;
+}
+
