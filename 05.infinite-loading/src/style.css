@@ -1,0 +1,63 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(43, 0, 92);
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+h1{
+    margin: 50px 0px;
+    color: aliceblue;
+}
+
+
+.card{
+    padding: 30px;
+    min-width: 300px;
+    width: 45%;
+    max-width: 600px;
+    background-color: rgb(236, 192, 240);
+    border-radius: 10px;
+    transition: 0.3s ease;
+    margin: 30px 0px 40px 0px;
+    opacity: 0;
+    transform: translate(200%,60%) rotate(100deg);
+    transition: 0.7s ease;
+}
+
+.card:nth-of-type(even){
+    transform: translate(-200%,60%) rotate(100deg);
+}
+
+.card.show-me{
+    opacity: 1;
+    transform: translate(0%,0%) rotate(0deg);
+}
+
+.card img{
+    width: 100%;
+}
+
+.card h3{
+    color: rgb(43, 0, 92);
+    margin: 10px 0px;
+}
+
+p{
+    color: rgb(39, 23, 58);
+    text-transform: capitalize;
+    font-variant: small-caps;
+}
+
+.card:hover{
+    cursor: pointer;
+}
