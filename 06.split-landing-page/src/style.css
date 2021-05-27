@@ -1,0 +1,121 @@
+:root{
+    --var-right-color : rgba(126, 61, 0, 0.267);
+    --var-left-color : rgba(60, 1, 109, 0.356);
+    --var-right-btn-hover-color: rgb(126,61,0);
+    --var-left-btn-hover-color: rgb(63, 0, 180);
+    --var-hover-width : 75%;
+    --var-other-width: 25%;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #333333;
+}
+
+.split{
+    position: absolute;
+    width: 50%;
+}
+
+.split.left{
+    background: url(./../../asset/img/anime-img/see-the-failling-star.jpg) no-repeat center center/cover;
+    height: 100%;
+    left: 0px;
+}
+
+.split.left::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--var-left-color);
+}
+
+.split.left .btn:hover{
+    background-color: var(--var-left-btn-hover-color);
+    border: 2px solid var(--var-left-btn-hover-color);
+}
+
+.split.right{
+    background: url(./../../asset/img/anime-img/girl-twilight.jpg) no-repeat center center/cover;
+    height: 100%;
+    right: 0px;
+}
+
+.split.right .btn:hover{
+    background-color: var(--var-right-btn-hover-color);
+    border: 2px solid var(--var-right-btn-hover-color);
+}
+
+
+
+.split.right::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--var-right-color);
+}
+
+.split.right,
+.split.left,
+.split.right::before,
+.split.right::before{
+    transition: 0.4s ease;
+}
+
+h1,.btn{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h1{
+    top: 20%;
+    color: aliceblue;
+}
+
+.btn{
+    top: 40%;
+    text-decoration: none;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+    padding: 7px 18px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.4s ease;
+}
+
+.hover-left .left{
+    width: var(--var-hover-width);
+}
+
+.hover-left .right{
+    width: var(--var-other-width);
+}
+
+.hover-right .right{
+    width: var(--var-hover-width);
+}
+
+.hover-right .left{
+    width: var(--var-other-width);
+}
+
+@media (max-width: 800px) {
+    h1{
+        font-size: 20px;
+    }
+
+    .btn{
+        font-size: 15px;
+    }
+}
