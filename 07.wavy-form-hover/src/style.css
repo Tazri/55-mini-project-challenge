@@ -1,0 +1,110 @@
+:root{
+    --var-basic-radius : 8px;
+    --var-primary-color : rgb(255,0,255);
+    --var-secoundry-color : aliceblue;
+    --var-input-color : rgb(128,120,127);
+}
+
+*{
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--var-primary-color);
+}
+
+form{
+    background-color: var(--var-secoundry-color);
+    color: var(--var-primary-color);
+    padding: 40px;
+    border-radius: var(--var-basic-radius);
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.form-control{
+    position: relative;
+}
+
+.form-control > input{
+    margin-bottom: 60px ;
+}
+
+.input{
+    background-color: var(--var-secoundry-color);
+    border: none;
+    border-bottom: 2px solid rgb(209, 209, 209);
+    display: block;
+    width: 100%;
+    padding-bottom: 5px;
+    font-size: 16px;
+    color: var(--var-input-color) ;
+    transition: 0.4s ease;
+}
+
+.input:focus,
+.input:valid{
+    outline: none;
+}
+
+.form-control .input label span{
+    transform: translateY(-30px);
+}
+
+.form-control label span{
+    display: inline-block;
+    color: var(--var-input-color);
+    font-size: 16px;
+    transition: 0.3s cubic-bezier(0.68,-0.55,0.255,1.55);
+}
+
+.form-control .input:focus + label span,
+.form-control .input:valid + label span{
+    color: rgb(255,0,255);
+    transform: translateY(-25px);
+}
+
+.input::-moz-focus-outer,.input::-moz-focus-outer{
+    outline: none;
+}
+
+.input:focus{
+    border-bottom: 2px solid var(--var-primary-color);   
+}
+
+.form-control label{
+    position: absolute;
+    left: 0px;
+    bottom: 5px;
+}
+
+input[type = submit]{
+    background-color: var(--var-primary-color);
+    width: 100%;
+    padding: 7px;
+    font-size: 19px;
+    border-radius: var(--var-basic-radius);
+    color: var(--var-secoundry-color);
+    cursor: pointer;
+    margin-bottom: 17px;
+    transition: 0.2s ease;
+}
+
+input[type=submit]:active{
+    transform: scale(0.95);
+}
+
+p{
+    font-size: 17px;
+}
+
