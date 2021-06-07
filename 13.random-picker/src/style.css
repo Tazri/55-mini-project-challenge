@@ -1,0 +1,78 @@
+:root{
+    --var-background-color: rgb(0, 172, 240);
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+*::-moz-focus-inner,
+*::-moz-focus-outer{
+    outline: none;
+}
+
+body{
+    background: var(--var-background-color);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+h3{
+    color: aliceblue;
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+textarea{
+    min-width: 300px;
+    width: 60%;
+    max-width: 600px;
+    min-height: 260px;
+    padding: 20px;
+    background: aliceblue;
+    border: 1px solid rgba(0, 0, 0, 0.11);
+    color: var(--var-background-color);
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.tag-container{
+    min-width: 300px;
+    width: 60%;
+    max-width: 600px;
+    margin: 0px auto;
+    text-align: left;
+    padding: 10px 0px;
+}
+
+.tag{
+    display: inline-block;
+    background: aliceblue;
+    color: var(--var-background-color);
+    padding: 8px 14px;
+    margin: 4px 7px;
+    border-radius: 30px;
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.tag.highlight{
+    background: rgb(255, 167, 2);
+}
