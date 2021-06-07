@@ -1,0 +1,127 @@
+:root{
+    --var-primary-color : linear-gradient(90deg,#0eca92,rgb(68, 206, 183));
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+*::-moz-focus-inner,
+*::-moz-focus-outer{
+    outline: none;
+}
+
+body{
+    background: var(--var-primary-color);
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+h1{
+    text-align: center;
+    margin: 50px 0px;
+    color: aliceblue;
+}
+
+.faq-container{
+    max-width: 600px;
+    min-width: 250px;
+    margin: 0px auto;    
+}
+
+.faq{
+    background: transparent;
+    border: 1px solid #9fa4a8;
+    margin: 20px 0px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+.faq.active{
+    background: aliceblue;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1),0 3px 6px rgba(0,0,0,0.1);
+}
+
+.faq.active::before,
+.faq.active::after{
+    content: '\f075';
+    font-family: 'Font Awesome 5 Free';
+    color: #2ecc75;
+    font-size: 7rem;
+    position: absolute;
+    opacity: 0.3;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+}
+
+.faq.active::before{
+    color: #5eff00;
+    left: -30px;
+    top: -10px;
+    transform: rotateY(180deg);
+}
+
+.faq-title{
+    margin: 0px 35px 0px 0px;
+    color: aliceblue;
+}
+
+.faq.active .faq-title{
+    color: #003b2a;
+}
+
+.faq-text{
+    display: none;
+    margin: 30px 0px 0px;
+    color: rgb(0, 32, 23);
+}
+
+.faq.active .faq-text{
+    display: block;
+}
+
+.btn{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 0px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 30px;
+    height: 30px;
+    color: aliceblue;
+}
+
+.faq .btn .fa-times{
+    display: none;
+}
+
+.faq.active .btn .fa-times{
+    display: block;
+}
+
+.faq.active .btn .fa-chevron-down{
+    display: none;
+}
+
+.faq.active .btn{
+    background: #009468;
+    color: aliceblue;
+    border-radius: 50%;
+}
