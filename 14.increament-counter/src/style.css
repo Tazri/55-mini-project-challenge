@@ -1,0 +1,59 @@
+:root{
+    --var-background : linear-gradient(90deg,rgb(0, 179, 164),#05dbe2);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+*::-moz-focus-inner,
+*::-moz-focus-outer{
+    outline: none;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--var-background);
+    color: aliceblue;
+}
+
+.counter{
+    text-align: center;
+    margin:10px 40px;
+}
+
+.counter i{
+    font-size: 50px;
+}
+
+.counter-number{
+    font-size: 50px;
+    margin: 10px 0px;
+}
+
+.counter h3{
+    font-size: 16px;
+}
+
+
+/* media query here */
+@media (max-width: 550px) {
+    body{
+        flex-direction: column;
+    }
+
+    .counter{
+        margin: 20px 40px;
+    }
+}
