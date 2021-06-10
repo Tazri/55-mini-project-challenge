@@ -1,0 +1,114 @@
+:root{
+    --var-background-color : #3494e4;
+    --var-text-color : aliceblue;
+    --var-border-color : #144fc6;
+    --var-cup-background-color : aliceblue;
+    --var-small-cup-background-color: rgba(240, 248, 255, 0.89);
+    --var-fill-color : #6ab3f8;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+*::-moz-focus-inner,
+*::-moz-focus-outer{
+    outline: none;
+}
+
+body{
+    background-color: var(--var-background-color);
+    color: var(--var-text-color);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    margin-bottom: 20px;
+}
+
+h1{
+    margin: 10px 0px 0px;
+}
+
+h3{
+    margin: 7px 0px;
+}
+
+.cup{
+    height: 330px;
+    width: 130px;
+    background-color: var(--var-cup-background-color);
+    border: 4px solid var(--var-border-color);
+    color: var(--var-border-color);
+    border-radius: 0px 0px 40px 40px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    overflow: hidden;
+}
+
+.cup.small-cup{
+    height: 95px;
+    width: 50px;
+    border-radius: 0px 0px 15px 15px;
+    background: var(--var-small-cup-background-color);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cup.small-cup.full{
+    background-color: var(--var-fill-color) ;
+    color: var(--var-text-color);
+}
+
+.cups{
+    width: 280px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.remained{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.remained span{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.parcentage{
+    background-color: var(--var-fill-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    height: 0px;
+    transition: 0.3s ease;
+}
+
+.text{
+    text-align: center;
+    margin: 8px 0px;
+}
