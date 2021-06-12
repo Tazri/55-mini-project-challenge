@@ -1,0 +1,140 @@
+:root{
+    --var-primary-color : aliceblue;
+    --var-secoundry-color : black;
+    --var-secound-needle-color : rgb(255, 38, 0);
+    --var-date-mode-color : rgba(0, 0, 0, 0.603);
+}
+
+html.dark{
+    --var-primary-color : rgba(0, 0, 0, 0.911);
+    --var-secoundry-color : aliceblue;
+    --var-date-mode-color : rgba(240, 248, 255, 0.87);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;  
+}
+
+*:focus{
+    outline: none;
+}
+
+*::-moz-focus-inner,
+*::-moz-focus-outer{
+    outline: none;
+}
+
+body{
+    background-color: var(--var-primary-color);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    transition: 0.3s ease-in;
+}
+
+.btn{
+    padding: 0.7rem 1rem;
+    color: var(--var-primary-color);
+    background-color: var(--var-secoundry-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.btn:active{
+    transform: scale(0.9);
+}
+
+/* start design the clock */
+
+.clock{
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.needle{
+    height: 50px;
+    width: 2px;
+    background-color: var(--var-secoundry-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: translate(-50%,-100%);
+    transition: 0.4s ease-in;
+}
+
+.needle.mintue{
+    height: 75px;
+}
+
+.needle.secound{
+    height: 100px;
+    width: 1px;
+    background-color: var(--var-secound-needle-color);
+}
+
+.circle{
+    height: 9px;
+    width: 9px;
+    border: 2px solid var(--var-secound-needle-color);
+    background-color: var(--var-primary-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.3s ease-in;
+}
+
+/* end design the clock */
+
+/* start design the time and date */
+
+.time{
+    color: var(--var-secoundry-color) ;
+    transition: 0.3s ease-in;
+}
+
+.date{
+    color: var(--var-date-mode-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in;
+}
+
+.date span{
+    background-color: var(--var-secoundry-color);
+    color: var(--var-primary-color);
+    display: flex;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    border-radius: 50%;
+    transition: 0.3s ease-in;
+}
+
+/* end design the time and date */
+
+/* keayfram for secound */
+@keyframes rotateNeedle {
+    0%{
+        transform: translate(-50%,-100%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-100%) rotate(360deg);
+    }
+}
