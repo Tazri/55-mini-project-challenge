@@ -1,0 +1,57 @@
+:root{
+    --var-background : linear-gradient(90deg,#dad731,#2bd62b);
+    --var-button-background-color : linear-gradient(90deg,#858200,#01a001);   
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+*::-moz-focus-inner,
+*::-moz-focus-outer{
+    outline: none;
+}
+
+body{
+    background: var(--var-background);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background: var(--var-button-background-color);
+    border: none;
+    color: aliceblue;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+button .circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    position: absolute;
+    transform: translate(-50%,-50%) scale(0);
+    animation: scale 0.3s ease-in;
+}
+
+@keyframes scale {
+    to{
+        transform: translate(-50%,-50%) scale(3);
+        opacity: 0;
+    }
+}
+
