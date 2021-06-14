@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Picasso</title>
+</head>
+<body>
+    <!-- message here -->
+    <div class="message-box"><h1 class="message">Drag and Drop the picasso and click the shuffle button</h1></div>
+
+    <!-- drag and drop container-->
+    <div class="container">
+        <!-- box -->
+        <div class="box" id="one" ondragstart="false">
+            <!-- dragable box-->
+            <div class="fill" draggable="true"></div>
+            <!-- close div -->
+            <div class="door"></div>
+        </div>
+
+        <div class="box" id="two" ondragstart="false">
+            <div class="door"></div>
+        </div>
+
+        <div class="box" id="three" ondragstart="false">
+            <div class="door"></div>
+        </div>
+        <div class="box" id="four" ondragstart="false">
+            <div class="door"></div>
+        </div>
+    </div>
+    <!-- end drag and drop container -->
+
+    <!-- button -->
+    <button id="play-btn">Shuffle</button>
+    <script src="./src/script.js"></script>
+</body>
+</html>
