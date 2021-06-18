@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Benne&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Benne', serif;
+    height: 100vh;
+}
+
+.slider{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.left-slider{
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: 0.5s ease-in-out;
+}
+
+.left-slider > div,
+.left-slide{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-slider h1,
+.left-slide h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -40px;
+    text-shadow: 0px 2px 12px rgba(0, 0, 0, 0.514);
+    user-select: none;
+}
+
+.left-slider p,
+.left-slide p{
+    font-size: 20px;
+    font-weight: bolder;
+    text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.76);
+    user-select: none;
+}
+
+.right-slider{
+    position: absolute;
+    top: 0px;
+    left: 35%;
+    width: 65%;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+}
+
+.right-slider > div{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.btn{
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 100;
+    color: #aaa;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(240, 248, 255, 0.466);
+    transition: 0.3s ease;
+}
+
+.btn:hover{
+    color: black;
+}
+
+.slider .button-container button{
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 1;
+}
+
+.slider .button-container .btn-up{
+    border-radius:10px 10px 0px 0px;
+    transform: translateY(-100%);
+}
+
+.slider .button-container .btn-down{
+    transform: translateX(-100%);
+    border-radius: 0px 0px 10px 10px;
+}
