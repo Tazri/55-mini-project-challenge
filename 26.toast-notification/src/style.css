@@ -1,0 +1,89 @@
+:root{
+    --var-background-color : linear-gradient(90deg, rgb(243, 114, 209) 0%,rgb(44, 19, 241) 100%);
+    --var-color : aliceblue;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*::-moz-focus-inner,
+*::-moz-focus-outer{
+    outline: none;
+}
+
+*:focus{
+    outline: none;
+}
+
+body{
+    background: var(--var-background-color);
+    color: var(--var-color);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+button{
+    padding: 10px 15px;
+    background: transparent;
+    border: 2px solid aliceblue;
+    color: aliceblue;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:active{
+    transform: scale(0.9);
+}
+
+.toast{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    transition: 0.3s ease;
+}
+
+.message{
+    position: relative;
+    background: rgba(240, 248, 255, 0.219);
+    width: 190px;
+    height: 0px;
+    padding: 20px;
+    margin: 10px 0px;
+    overflow: hidden;
+    cursor: pointer;
+    transform: scale(0);
+    transition: 0.3s ease;
+}
+
+.message h2{
+    font-weight: lighter;
+    font-size: 22px;
+    margin: 0px 0px 12px 0px;
+}
+
+.message::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: rgba(240, 248, 255, 0.596);
+    filter: blur(90px);
+}
+
+.toast .active-message{
+    height: auto;
+    transform: scale(1);
+}
+
+.toast .delete{
+    opacity: 0;
+}
