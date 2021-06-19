@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Auto Text Effect</title>
+</head>
+<body>
+    
+    <!-- start tool div -->
+    <form id="form">
+        <div class="color">
+            <input type="color" value="#f0f8ff" id="color">
+        </div>
+        <input 
+            type="text" 
+            name="text" 
+            id="text"
+            placeholder="Write something"
+            >
+
+        <input type="submit" value="Add" id="add-btn">
+    </form>
+    <!-- end tool div-->
+
+    <!-- text -->
+    <h1 class="auto-text" id="auto-text">Write something inside the input box.</h1>
+
+
+    <!-- start speed -->
+    <div class="speed">
+        <button class="up">+</button>
+        <span id="speed">3</span>
+        <button class="down">-</button>
+    </div>
+    <!-- end speed -->
+    <script src="./src/script.js"></script>
+</body>
+</html>
