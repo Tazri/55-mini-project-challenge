@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Tazri/55-mini-project-challenge#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3"
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "axios": "^0.21.1"
   }
 }
