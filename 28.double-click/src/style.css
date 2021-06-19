@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --var-background-color :  linear-gradient(0deg, rgb(176, 207, 255),rgb(92, 104, 168)) ; 
+    --var-color : aliceblue;
+    --var-animation-speed : ease;
+    --var-animation-duration : 0.6s;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+*::-moz-focus-inner,
+*::-moz-focus-outer{
+    outline: none;
+}
+
+body{
+    background: var(--var-background-color);
+    font-family: 'Roboto', sans-serif ;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--var-color);
+}
+
+h1{
+    margin: 50px 0px;
+    text-align: center;
+}
+
+.tab{
+    margin: 0px auto;
+    min-width: 250px;
+    width: 70%;
+    max-width: 800px;
+    height: 70%;
+    background: rgba(240, 248, 255, 0.308);
+    backdrop-filter: blur( 14px );
+    -webkit-backdrop-filter: blur( 14px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    position: relative;
+}
+
+i{
+    position: absolute;
+    top: 29px;
+    left: 100px;
+    transform: translate(-50%,-50%) scale(0);
+    animation: come var(--var-animation-duration) var(--var-animation-speed);
+}
+
+@keyframes come {
+    to{
+        transform: translate(-50%,-50%) scale(5);
+        opacity: 0;
+    }
+}

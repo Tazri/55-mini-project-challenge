@@ -1,0 +1,45 @@
+const object = [
+    'fas fa-heart',
+    'fas fa-tshirt',
+    'fas fa-crow',
+    'fas fa-dove',
+    'fas fa-fish',
+    'fas fa-hippo',
+    'fas fa-bell',
+    'fas fa-ambulance',
+    'fas fa-car',
+    'fas fa-motorcycle',
+    'fas fa-taxi',
+    'fas fa-truck-pickup',
+    'fas fa-truck-monster',
+    'fas fa-tree',
+    'fas fa-glass-martini',
+    'fas fa-mug-hot',
+    'fas fa-wine-glass',
+    'fas fa-apple-alt',
+    'fas fa-bone',
+    'fas fa-bread-slice',
+    'fas fa-egg',
+    'fas fa-lemon',
+    'fas fa-paper-hot',
+    'fas fa-pizza-slice'
+]
+
+
+const color = [
+    '#F0F8FF',
+    '#7FFFD4',
+    '#F0FFFF',
+    '#00FFFF',
+    '#00BFFF',
+    '#FF1493',
+    '#9400D3',
+    '#FF00FF',
+    '#20B2AA',
+    '#00FF00',
+    '#FFA500',
+    '#FF4500',
+    '#98FB98',
+    '#FF0000',
+    '#40E0D0'
+]
