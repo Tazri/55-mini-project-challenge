@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --var-background-color : linear-gradient(45deg, rgb(140, 85, 250) 0%,rgb(200, 215, 253) 75%,rgb(143, 230, 243) 100%);
+    --var-color : aliceblue;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+*::-moz-focus-inner,
+*::-moz-focus-outer{
+    outline: none;
+}
+
+body{
+    background: var(--var-background-color);
+    height: 100vh;
+    width: 100vw;
+    font-family:  'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--var-color);
+}
+
+main{
+    min-width: 250px;
+    width: 80%;
+    max-width: 600px ;
+    padding: 20px;
+    border: 1px solid rgba(240, 248, 255, 0.534);
+    background: rgba(240, 248, 255, 0.171);
+}
+
+main h1{
+    user-select: none;
+    text-align: center;
+}
+
+.password{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    color: #333;
+    padding: 10px 10px;
+    background: rgba(240, 248, 255, 0.164);
+    border: 1px solid rgba(240, 248, 255, 0.5);
+    margin: 30px 0px;
+}
+
+.password > p{
+    color: #555;
+    user-select: none;
+}
+
+.password > span{
+    background: rgba(240, 248, 255, 0.747);
+    border: 1px solid rgba(240, 248, 255, 0.507);
+    width: 35px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.key-animation{
+    animation: copy 0.4s ease;
+}
+
+/* key animation for span */
+@keyframes copy {
+    0%{
+        transform: scale(0.7);
+    }
+
+    50%{
+        transform:  scale(1.2);
+    }
+
+    75%{
+        transform: scale(0.90);
+    }
+}
+
+.check-container{
+    width: 100%;
+}
+
+.check-container .password-length{
+    margin: 10px 0px 20px 0px;
+    align-items: center;
+}
+
+input[type = text]{
+    background: rgba(240, 248, 255, 0.267);
+    border: 1px solid rgba(240, 248, 255, 0.5);
+    width: 40px;
+    padding: 3px;    
+    text-align: center;
+    color: #555;
+}
+
+.check{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px;
+    user-select: none;
+}
+
+.check label{
+    cursor: pointer;
+}
+
+input[type = checkbox]{
+    cursor: pointer;
+}
+
+button{
+    background: rgba(240, 248, 255, 0.274);
+    border: 1px solid rgba(240, 248, 255, 0.466);
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: aliceblue;
+}
+
+textarea{
+    user-select: all;
+    display: none;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Generate Password</title>
+</head>
+<body>
+    
+    <!-- start form  -->
+    <main>
+        <h1>Password Generator</h1>
+        <!-- start password div-->
+        <div class="password">
+            <p id="password"></p>
+            <span id="copy"><i class="far fa-clipboard"></i></span>
+        </div>
+
+        <!-- div check container -->
+        <div class="check-container">
+            <div class="check password-length">
+                <p>Password Length</p>
+                <input type="text" name="number" id="number-input" min="6" max="20" >
+            </div>
+
+            <div class="check">
+                <label for="upper">Include uppercase letters</label>
+                <input type="checkbox" name="upper" id="upper">
+            </div>
+
+            <div class="check">
+                <label for="lower">Include lowercase letter</label>
+                <input type="checkbox" name="lower" id="lower">
+            </div>
+
+            <div class="check">
+                <label for="number">Include numbers</label>
+                <input type="checkbox" name="number" id="number">
+            </div>
+
+            <div class="check">
+                <label for="symbol">Include Upper Case</label>
+                <input type="checkbox" name="symbol" id="symbol">
+            </div>
+        </div>
+        <!-- end check container -->
+
+        <button id="btn">Generate Password</button>
+    </main>
+    <!-- end form -->
+
+    <script src="./src/script.js"></script>
+</body>
+</html>
