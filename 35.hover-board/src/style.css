@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --var-background-color : #111111;
+    --var-box-shadow : 0 0 2px #000;
+    --var-box-background : #1d1d1d;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+*::-moz-focus-inner,
+*::-moz-focus-outer{
+    outline: none;
+}
+
+body{
+    background-color: var(--var-background-color);
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.box-container{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+    max-width: 400px;
+}
+
+.box{
+    background-color: var(--var-box-background);
+    box-shadow: var(--var-box-shadow);
+    height: 16px;
+    width: 16px;
+    margin: 2px;
+    transition: 2s ease;
+}
+
+.box:hover{
+    transition-duration: 0s;
+}
+
+.btn{
+    margin-top: 30px;
+    padding: 8px 20px;
+    background-color: #1d1d1d;
+    color: #444444;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
