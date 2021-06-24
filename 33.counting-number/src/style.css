@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --var-background-color : rgb(38, 147, 243);
+    --var-counter-hide-animation : counterHide 0.2s ease-out;
+    --var-final-show-animation : finalShow 0.2s ease-out;
+    --var-go-in-animation : goIn 0.5s ease-in-out;
+    --var-go-out-animation : goOut 0.5s ease-in-out;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+*::-moz-focus-inner,
+*::-moz-focus-outer{
+    outline: none;
+}
+
+html{
+    overflow: hidden;
+}
+
+body{
+    background-color: var(--var-background-color);
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+.counter-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+body .hide{
+    transform: translate(-50%,-50%) scale(0);
+    animation: var(--var-counter-hide-animation);
+}
+
+.numbers{
+    color:aliceblue;
+    font-size: 50px;
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+    width: 250px;
+}
+
+.number{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: bottom center;
+    transform: translate(-50%,-50%) rotate(120deg);
+}
+
+.numbers .in{
+    transform: translate(-50%,-50%) rotate(0deg);
+    animation:var(--var-go-in-animation) ;
+}
+
+.numbers .out{
+    transform: translate(-50%,-50%) rotate(-120deg);
+    animation: var(--var-go-out-animation);
+}
+
+.counter-container h4{
+    font-size: 30px;
+    color: aliceblue;
+}
+
+.final-message{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    text-align: center;
+}
+
+.final-message h1{
+    color: aliceblue;
+    font-size: 34px;
+}
+
+.final-message button{
+    background: transparent;
+    padding: 10px 24px;
+    border: 1px solid aliceblue;
+    margin: 20px auto;
+    font-size: 19px;
+    color: aliceblue;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+.final-message button:active{
+    transform: scale(0.9);
+}
+
+body .final-show{
+    transform: translate(-50%,-50%) scale(1);
+    animation: var(--var-final-show-animation);
+}
+
+/* Key frames */
+
+@keyframes counterHide{
+    0%{
+        transform: translate(-50%,-50%) scale(1);
+    }
+
+    100%{
+        transform: translate(-50%,-50%) scale(0);
+    }
+}
+
+@keyframes finalShow {
+    0%{
+        transform: translate(-50%,-50%) scale(0);
+    }
+
+    30%{
+        transform: translate(-50%,-50%) scale(1.6);
+    }
+
+    100%{
+        transform: translate(-50%,-50%) scale(1);
+    }
+}
+
+@keyframes goIn {
+    0%{
+        transform: translate(-50%,-50%) rotate(120deg);
+    }
+
+    30%{
+        transform: translate(-50%,-50%) rotate(-20deg);
+    }
+
+    60%{
+        transform: translate(-50%,-50%) rotate(10deg);
+    }
+
+    100%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+}
+
+@keyframes goOut {
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+
+    60%{
+        transform: translate(-50%,-50%) rotate(20deg);
+    }
+
+    100%{
+        transform: translate(-50%,-50%) rotate(-120deg);
+    }
+}
