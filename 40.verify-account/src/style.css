@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali&display=swap');
+
+:root{
+    --var-background : linear-gradient(45deg, rgb(140, 85, 250) 0%,rgb(200, 215, 253) 75%,rgb(200,215,253) 100%);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+*::-moz-focus-inner,
+*::-moz-focus-outer{
+    outline: none;
+}
+
+body{
+    background: var(--var-background);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Mali', cursive;
+}
+
+.container{
+    min-width: 260px;
+    width: 90%;
+    max-width: 700px;
+    border: 1px solid aliceblue;
+    background: rgba(240, 248, 255, 0.267);
+    padding: 40px;
+}
+
+.container h1{
+    color: rgb(55, 161, 255);
+    text-align: center;
+    margin: 20px 0px;    
+}
+
+.container p{
+    margin: 10px 0px;
+    color: rgb(3, 69, 128);
+    font-size: 17px;
+    text-align: center;
+}
+
+.code-container{
+    margin: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.code{
+    background: rgba(240, 248, 255, 0.445);
+    color: #252525;
+    border: 1px solid aliceblue;
+    text-align: center;
+    height: 80px;
+    font-size: 36px;
+    border-radius: 5px;
+    -moz-appearance: textfield;
+    transition: 0.3s ease;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.code:valid{
+    box-shadow: 0px 6px 0px rgb(60, 162, 252);
+    border: 1px solid rgb(55, 161, 255);
+}
+
+.container .last-message{
+    background: rgba(240, 248, 255, 0.144);
+    padding: 5px 3px;
+}
+
+/* media query */
+@media (max-width : 570px) {
+    .code{
+        font-size: 20px;
+        height: 48px;
+    }
+}
+
+@media (max-width : 380px) {
+    .code{
+        font-size: 16px;
+        height: 40px;
+    }
+}
+
+@media (max-width : 320px) {
+    .code{
+        font-size: 14px;
+        height: 34px;
+    }
+}
