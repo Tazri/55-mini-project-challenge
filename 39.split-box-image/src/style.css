@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --var-background-color : linear-gradient(0deg, rgb(128, 174, 248),rgb(51, 157, 243));
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+*::-moz-focus-inner,
+*::-moz-focus-outer{
+    outline: none;
+}
+
+body{
+    background: var(--var-background-color);
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    transition: 0.4s ease;
+}
+
+body .split{
+    width: 600px;
+    height: 600px;
+}
+
+.box{
+    background-image: url(./../../asset/img/art/village_sky.jpg);
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    height: 125px;
+    width: 125px;
+    position: relative;
+    transition: 0.4s ease;
+}
+
+.box::after{
+    content: ' ';
+    background-color: rgb(0, 126, 236);
+    position: absolute;
+    top: 8px;
+    right: -15px;
+    height: 100%;
+    width: 15px;
+    transform: skewY(45deg);
+}
+
+.box::before{
+    content: ' ';
+    background-color: rgb(0, 126, 236);
+    position: absolute;
+    left: 8px;
+    bottom: -15px;
+    height: 15px;
+    width: 100%;
+    transform: skewX(45deg);
+}
+
+body .split .box{
+    transform: rotateZ(360deg);
+}
+
+.btn{
+    margin-top: 20px;
+    font-size: 19px;
+    padding: 7px 18px;
+    cursor: pointer;
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    background-color: rgba(240, 248, 255, 0.219);
+    box-shadow: 0px 3px rgb(239, 240, 241);
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.btn:active{
+    transform: scale(0.9);
+}
