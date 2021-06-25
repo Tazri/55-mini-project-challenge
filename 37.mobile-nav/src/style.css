@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+    --var-background-color : linear-gradient(90deg, rgb(243, 114, 209) 0%,rgb(54,107,251) 100%);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+*::-moz-focus-inner,
+*::-moz-focus-outer{
+    outline: none;
+}
+
+body{
+    background: var(--var-background-color);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.phone{
+    position: relative;
+    overflow: hidden;
+    border: 3px solid aliceblue;
+    border-radius: 15px;
+    height: 600px;
+    width: 340px;
+}
+
+.phone .content{
+    opacity: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 540px;
+    width: 100%;
+    transition: opacity 0.4s ease;
+}
+
+body .phone .show{
+    opacity: 1;
+}
+
+nav{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    margin-top: -5px;
+    width: 100%;
+}
+
+nav ul{
+    background: aliceblue;
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    color: #777;
+    cursor: pointer;
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+nav ul li p{
+    font-size: 12px;
+    margin: 2px 0px;
+}
+
+nav ul li:hover, nav ul li.active{
+    color: rgb(195, 4, 253);
+}
