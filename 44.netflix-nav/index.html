@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Netflix Nav</title>
+</head>
+<body>
+    <!-- open btn -->
+    <button class="btn open-btn">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- content -->
+    <main>
+        <h1 class="logo">Netflix</h1>
+        <p>Netfilx Navigation</p>
+    </main>
+    <!-- end content -->
+
+    <!-- start nav -->
+    <div class="nav black-nav hide" id="nav">
+        <div class="nav red-nav">
+            <div class="nav white-nav">
+                <!-- close btn -->
+                <button class="btn close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <!-- logo -->
+                <h1 class="logo nav-logo">Netflix</h1>
+
+                <ul class="list">
+                    <li>Movie</li>
+                    <li>WebSeries</li>
+                    <li>Anime</li>
+                    <li>
+                        <ul>
+                            <li>Fighting</li>
+                            <li>Action</li>
+                            <li>Romantic</li>
+                            <li>Physic</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end nav -->
+
+    <script src="./src/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+*::-moz-focus-inner,
+*::-moz-focus-outer{
+    outline: none;
+}
+
+body{
+    background-color: rgb(217, 233, 247);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav,.open-btn{
+    position: absolute;
+}
+
+.open-btn{
+    top: 20px;
+    left: 20px;
+}
+
+.btn{
+    border: none;
+    padding: 10px 12px;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+main{
+    text-align: center;
+}
+
+main h1{
+    color: red;
+    font-size: 69px;
+}
+
+main p{
+    color: rgb(109, 107, 107);
+}
+
+.nav{
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    transition: 0.3s ease;
+}
+
+body .hide.black-nav{
+    transform: translateX(-100%);
+    transition-delay: 0.6s;
+}
+
+body .hide .red-nav{
+    transform: translateX(-100%);
+    transition-delay: 0.3s ;
+}
+
+body .hide .white-nav{
+    transform: translateX(-100%);
+    transition-delay: 0s ;
+}
+
+.black-nav{
+    min-width: 270px;
+    max-width: 380px;
+    background-color: black;
+    transition-delay: 0s ;
+}
+
+.red-nav{
+    width: 95%;
+    background-color: red;
+    transition-delay: 0.3s;
+}
+
+.white-nav{
+    width: 95%;
+    background-color: rgb(217, 233, 247);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    transition-delay: 0.6s;
+}
+
+.close-btn{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    color: grey;
+}
+
+.nav-logo{
+    color: red;
+    padding: 0px 0px 30px 0px;
+}
+
+.list{
+    margin-left: 10px;
+    list-style: none;
+}
+
+.list li{
+    margin: 10px 0px;
+    color: rgb(24, 23, 23);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.list li ul{
+    padding-left: 10px;
+    list-style: none;
+}
+
+.list li ul li{
+    color: grey;
+}
+
+.list li:hover{
+    color: red;
+    margin-left: 10px;
+}
