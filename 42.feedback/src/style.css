@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+*::-moz-focus-inner,
+*::-moz-focus-outer{
+    outline: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: rgb(243, 243, 206);
+    outline: none;
+}
+
+.feedback,.message{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.message{
+    background: aliceblue;
+    padding: 40px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0,0.1),2px 2px 10px rgba(0, 0, 0,0.1);
+    transition-delay: 0.5s;
+}
+
+.message h2{
+    font-size: 35px;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.message p{
+    color: rgb(126, 47, 47);
+}
+
+.feedback{
+    min-width: 270px;
+    width: 97%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: aliceblue;
+    border-radius: 18px ;
+    padding: 40px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0,0.1),2px 2px 10px rgba(0, 0, 0,0.1);
+}
+
+.emoji-container{
+    width: 100%;
+    margin: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.emoji{
+    border: 2px solid rgba(185, 185, 185, 0.192);
+    padding: 24px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.emoji-container .active{
+    color: rgb(109, 109, 5);
+    border: 2px solid rgb(255, 255, 15);
+    box-shadow: 0px 6px 0px rgb(241, 241, 95);
+}
+
+.emoji p{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.emoji img{
+    width: 90px;
+}
+
+.btn{
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgb(170, 170, 4);
+    color: aliceblue;
+}
+
+.hide{
+    transform: translate(-50%,-50%) scale(0);
+}
+
+/* media query */
+@media (max-width: 460px) {
+    .emoji img{
+        width: 70px;
+    }
+}
+
+@media (max-width: 390px) {
+    .feedback{
+        padding: 20px 10px;
+    }
+
+    .feedback p{
+        text-align: center;
+    }
+
+    .emoji-container{
+        width: 100%;
+    }
+
+    .emoji{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .emoji img{
+        width: 40px;
+    }
+}
