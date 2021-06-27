@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+*::-moz-focus-inner,
+*::-moz-focus-outer{
+    outline: none;
+}
+
+body{
+    background: rgb(43, 147, 238);
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.quiz-box,.score{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.quiz-box{
+    min-width: 270px;
+    width: 99%;
+    max-width: 600px;
+    padding: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    color: aliceblue;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.quiz-box h2{
+    margin: 10px 0px 20px 0px;
+    font-size: 35px;
+}
+
+.option{
+    margin: 6px 0px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.option label{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button{
+    width: 100%;
+    margin: 30px 0px 10px 0px;
+    padding: 10px 0px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    color: rgb(43, 147, 238);
+    border-radius: 10px;
+}
+
+.score{
+    color: aliceblue;
+    transition-delay: 0.4s;
+    transition: 0.3s ease;
+}
+
+.hide{
+    transform: translate(-50%,-50%) scale(0);
+}

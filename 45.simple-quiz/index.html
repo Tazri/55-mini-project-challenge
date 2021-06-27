@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Simple Quiz</title>
+</head>
+<body>
+    
+    <!-- start quiz box -->
+    <div class="quiz-box">
+        <h2 class="question">This is quistion.</h2>
+
+        <!-- start option -->
+        <div class="option">
+            <input type="radio" name="quiz" id="a" class="input-option">
+            <label for="a" id="label-a">Qouestion One</label>
+        </div>
+        <!-- end option -->
+
+        <!-- start option -->
+        <div class="option">
+            <input type="radio" name="quiz" id="b" class="input-option" value="dadag">
+            <label for="b" id="label-b">Qouestion One</label>
+        </div>
+        <!-- end option -->
+
+        <!-- start option -->
+        <div class="option">
+            <input type="radio" name="quiz" id="c" class="input-option">
+            <label for="c" id="label-c">Qouestion One</label>
+        </div>
+        <!-- end option -->
+
+        <!-- start option -->
+        <div class="option">
+            <input type="radio" name="quiz" id="d" class="input-option">
+            <label for="d" id="label-d">Qouestion One</label>
+        </div>
+        <!-- end option -->
+
+        <button id="submit">Submit</button>
+    </div>
+    <!-- end quiz box -->
+
+    <!-- start score -->
+    <div class="score hide">
+        <h1>Your Score is <span id="score-value">20</span></h1>
+        <button id="reload">Reload</button>
+    </div>
+    <!-- end score-->
+    <script src="./src/data.js"></script>
+    <script src="./src/script.js"></script>
+</body>
+</html>
