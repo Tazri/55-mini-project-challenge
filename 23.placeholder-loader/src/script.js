@@ -2,7 +2,7 @@
 const data = {
     headerText : 'Piano in The Sky',
     contentText : 'Do you like pinao? I am like piano. but funny thing is i can not play piano.But I want to learn piano. I fill good when i hear piano sound. It fill me good.One day I will learn piano.',
-    avaterUrl : 'url(./../asset/img/avater/vector-format-avater.png)',
+    avaterUrl : 'url(./../asset/img/avater/md-tazri.png)',
     imgHTML: '<img src="./../asset/img/anime-img/piano.jpg" alt="pinao">',
     nameText : 'Md Tazri',
     titleText : 'Programmer,'
