@@ -1,0 +1,81 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+.box{
+    position: relative;
+    background-color: #222;
+    width: 270px;
+    height: 370px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.box::after{
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.progress-circle{
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.progress-circle svg{
+    transform: rotate(-90deg);
+    width: 160px;
+    height: 160px;
+}
+
+circle{
+    fill: transparent;
+    stroke-width: 10;
+    stroke: rgb(0, 136, 255);
+    stroke-dasharray: 380;
+    stroke-dashoffset: 380;
+    stroke-linecap: round;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.progress-circle .progress-status{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgb(0, 136, 255);
+    font-size: 25px;
+    font-weight: bold;    
+}
+
+.title{
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}

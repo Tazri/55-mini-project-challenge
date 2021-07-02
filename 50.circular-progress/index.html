@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Circular Progress</title>
+</head>
+<body>
+
+    <!-- start box-->
+    <div class="box">
+        <!-- progress circle -->
+        <div class="progress-circle" data-parcent="75">
+            <svg>
+                <circle cx="80" cy="80" r="60" style="stroke:#ff2600"></circle>
+            </svg>
+
+            <h2 class="progress-status" style="color: #ff2600;">75%</h2>
+        </div>
+        
+        <h2 class="title" style="color:#ff2600;">HTML</h2>
+    </div>
+    <!-- end box -->
+
+    <!-- start box-->
+    <div class="box">
+        <!-- progress circle -->
+        <div class="progress-circle" data-parcent="70">
+            <svg>
+                <circle cx="80" cy="80" r="60" style="stroke:#0088ff"></circle>
+            </svg>
+
+            <h2 class="progress-status" style="color:#0088ff">0%</h2>
+        </div>
+        
+        <h2 class="title" style="color: #0088ff;">CSS</h2>
+    </div>
+    <!-- end box -->
+
+    <!-- start box-->
+    <div class="box">
+       <!-- progress circle -->
+       <div class="progress-circle" data-parcent="65">
+            <svg>
+                <circle cx="80" cy="80" r="60" style="stroke:#ff7b00"></circle>
+            </svg>
+
+            <h2 class="progress-status" style="color:#ff7b00">0%</h2>
+        </div>
+    
+        <h2 class="title" style="color: #ff7b00;">JavaScript</h2> 
+    </div>
+    <!-- end box -->
+
+    <script src="./src/script.js"></script>
+</body>
+</html>
